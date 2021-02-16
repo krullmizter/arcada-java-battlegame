@@ -1,4 +1,4 @@
-### University Course | Java CMD Battlegame
+### University Course | Java Battlegame assigment
 
 A small CMD battle game written in Java 11, by me Samuel 👋 for my second year [Arcada](https://www.arcada.fi/en) data structure and algorithm course assignment.
 
