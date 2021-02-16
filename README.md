@@ -1,14 +1,13 @@
-### University Course | Java Battlegame assigment
+### University Course | Unity3D Covid simulation assigment
 
-A small CMD battle game written in Java 11, by me Samuel 👋 for my second year [Arcada](https://www.arcada.fi/en) data structure and algorithm course assignment.
+A Unity3D covid particle system simulation by me Samuel 👋 for my second year [Arcada](https://www.arcada.fi/en) oscillation & particle system course assignment.
 
 #### About
-The main idea behind this project was to use OOP standards to create a simple CMD based game. The use of getter and setters, and arrayLists are also included in this project. We also used serialization of files to save and load game files.
+This simulation uses Unitys game engine to produce a simulations of a particle system, in this case aa infectious virus spreading in a closed off area. The main task of this assignment was to created a closed of area, have a particle system attached to some game objects that on their own moved around in the gameplay scene. 
 
-The game itself isn't a 100% complete, and it its main purpose is only to show of the required tasks as I mentioned above. It does work to some extent but don't expect a 100h+ game. 🤭
+#### Gameplay 🕹️
+The game uses the Unitys particle system to emit particles from an infectious gameobject character at set intervals. If that infectious characters emission comes into contact with a healthy character that character becomes infected, and its material turns yellow. Patient zero has a red material. The game continues until all the characters have been infected.
 
-The commit history isn't included as this is a new public repository.
+The simulation lets the player choose the max amount of spawnable characters. At runtime the game calculates a random amount of characters between 2 - the inputted max number. One of them will be patient zero.
 
-#### Play it 🕹️
-
-Just `git clone` and run the `Main.java` file in the `src` folder to see the game in action.
+The movement of the characters are based on a waypoint `NavMesh` concept, made up by scattered waypoints that the characters in the simulation move between at a set speed.
