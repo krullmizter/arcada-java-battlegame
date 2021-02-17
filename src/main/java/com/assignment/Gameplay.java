@@ -216,20 +216,18 @@ public class Gameplay {
             System.out.print("Purchase item #: ");
             int purchaseItem = inputObj.nextInt() - 1;
 
-            if (purchaseItem < store.getItems().size() && purchaseItem > store.getItems().size()) {
-                if (coinsAmount < store.items.get(purchaseItem).getCost()) {
-                    System.out.println("You don't have enough money for that, move along!");
-                
-                } else {
-                    coinsAmount -= store.items.get(purchaseItem).getCost();
-                    inventory.items.add(store.items.get(purchaseItem));
-                        
-                    System.out.println(store.items.get(purchaseItem).getName() + " was added to your inventory.\nYour coin purse is now: " + coinsAmount + "€");
-                }
-
-            } else {
+            if (purchaseItem >= store.getItems().size()) {
                 System.out.println("That item doesn't exist, choose something else...");
                 store();
+
+            } else if (coinsAmount < store.items.get(purchaseItem).getCost()) {
+                System.out.println("You don't have enough money for that, move along!");
+
+            } else {
+                coinsAmount -= store.items.get(purchaseItem).getCost();
+                inventory.items.add(store.items.get(purchaseItem));
+                        
+                System.out.println(store.items.get(purchaseItem).getName() + " was added to your inventory.\nYour coin purse is now: " + coinsAmount + "€");
             }
         }
         
