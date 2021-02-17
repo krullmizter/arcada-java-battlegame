@@ -1,6 +1,6 @@
 ### University Course | Java CMD Battlegame
 
-A small CMD battle game written in Java 11, by me Samuel 👋 for my second year [Arcada](https://www.arcada.fi/en) datastructure and algorithm course assignment.
+A small CMD battle game written in Java, by me Samuel 👋 for my second year [Arcada](https://www.arcada.fi/en) datastructure and algorithm course assignment.
 
 #### About
 The main idea behind this project was to use OOP standards to create a simple CMD based game. The use of getter and setters, and arrayLists are also included in this project. We also used serialization of files to save and load game files.
